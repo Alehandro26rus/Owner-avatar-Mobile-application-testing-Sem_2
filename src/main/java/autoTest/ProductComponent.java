@@ -19,15 +19,13 @@ public class ProductComponent implements ContainerComponent {
         return price;
     }
 
-
     public int getPrice() {
         return price;
     }
-
 
     @Override
     public void display() {
         System.out.println("Product: " + title + ", price: " + getPrice() + " rub.");
     }
-    
+
 }
