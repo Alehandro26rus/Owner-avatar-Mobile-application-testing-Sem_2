@@ -12,7 +12,6 @@ public class ContainerTest {
         Assertions.assertEquals("Bread", product1.getTitle());
     }
 
-
     @Test
     void correctAmountOfProductsInTheContainerWhenAddingAProduct() {
         ProductComponent product1 = new ProductComponent("Bread", 111);
@@ -20,7 +19,6 @@ public class ContainerTest {
         container1.addComponent(product1);
         Assertions.assertEquals(111, container1.countPrice());
     }
-
 
     @Test
     void correctAmountOfProductsInAContainerWhenAddingAnotherContainer() {
