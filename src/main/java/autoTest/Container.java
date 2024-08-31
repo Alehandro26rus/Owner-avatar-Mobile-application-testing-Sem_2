@@ -14,11 +14,9 @@ public class Container implements ContainerComponent {
         this.childrenComponents = new ArrayList<>();
     }
 
-
     public String getTitle() {
         return title;
     }
-
 
     public void addComponent(ContainerComponent packageComponent) {
         childrenComponents.add(packageComponent);
@@ -28,7 +26,6 @@ public class Container implements ContainerComponent {
         childrenComponents.remove(packageComponent);
     }
 
-
     @Override
     public int countPrice() {
         return childrenComponents.stream()
@@ -36,12 +33,11 @@ public class Container implements ContainerComponent {
                 .mapToInt(Integer::intValue).sum();
     }
 
-
     @Override
     public void display() {
         System.out.println("Set: " + title);
         for (ContainerComponent task : childrenComponents) {
             task.display();
-        }    
+        }
     }
 }
